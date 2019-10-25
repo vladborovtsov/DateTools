@@ -12,8 +12,12 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/MatthewYork/DateTools.git",
                      :tag => "v1.4.3" }
 
-  s.ios.platform = :ios, '7.0'
-  s.osx.platform = :iox, '10.7'
+  #s.ios.platform = :ios, '7.0' #old syntax
+  #s.osx.platform = :iox, '10.7' #old syntax
+  
+  s.ios.deployment_target = '7.0'
+  s.osx.deployment_target = '10.7'
+  
   s.requires_arc = true
 
   s.source_files = 'DateTools'
