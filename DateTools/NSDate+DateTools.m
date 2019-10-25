@@ -1468,7 +1468,7 @@ static NSCalendar *implicitCalendar = nil;
     dispatch_once(&onceToken, ^{
         formatter = [[NSDateFormatter alloc] init];
     });
-
+    [formatter setCalendar:[NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian]];
     [formatter setDateStyle:style];
     [formatter setTimeZone:timeZone];
     [formatter setLocale:locale];
@@ -1526,7 +1526,7 @@ static NSCalendar *implicitCalendar = nil;
     dispatch_once(&onceToken, ^{
         formatter = [[NSDateFormatter alloc] init];
     });
-
+    [formatter setCalendar:[NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian]];
     [formatter setDateFormat:format];
     [formatter setTimeZone:timeZone];
     [formatter setLocale:locale];
